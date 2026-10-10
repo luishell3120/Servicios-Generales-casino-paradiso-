@@ -1,0 +1,232 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0f0f1a;
+  color: #e8e8f0;
+  min-height: 100vh;
+}
+
+/* ===== MENÚ ===== */
+#menu {
+  background: #1a1a2e;
+  border-bottom: 2px solid #d4af37;
+  padding: 15px 30px;
+}
+
+#menu nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#menu a {
+  color: #e8e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+#menu a:hover { color: #d4af37; }
+
+#menu .logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d4af37;
+  margin-right: auto;
+}
+
+/* ===== CONTENIDO ===== */
+.contenedor {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  color: #d4af37;
+  font-size: 2.2em;
+  margin-bottom: 8px;
+}
+
+.subtitulo {
+  color: #9a9ab0;
+  margin-bottom: 35px;
+}
+
+/* ===== TARJETAS ===== */
+.tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.tarjeta {
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-radius: 12px;
+  padding: 25px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  border-color: #d4af37;
+}
+
+.tarjeta h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+}
+
+.tarjeta p { color: #9a9ab0; }
+
+/* ===== PIE ===== */
+.pie {
+  text-align: center;
+  padding: 25px;
+  color: #6a6a80;
+  font-size: 0.9em;
+  border-top: 1px solid #2a2a44;
+  margin-top: 60px;
+}
+
+/* ===== HORARIO COMO IMAGEN ===== */
+.imagen-horario {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #2a2a44;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.nota {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.nota a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nota a:hover {
+  text-decoration: underline;
+}
+
+/* ===== POSTS (cambios, ausencias, redobles) ===== */
+.posts h2 {
+  color: #d4af37;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.post {
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-left: 4px solid #d4af37;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+}
+
+.post .fecha {
+  color: #6a6a80;
+  font-size: 0.85em;
+  margin-right: 12px;
+}
+
+.etiqueta {
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.etiqueta.cambio {
+  background: #2e4a8a;
+  color: #cfe0ff;
+}
+
+.etiqueta.ausencia {
+  background: #8a2e2e;
+  color: #ffd6d6;
+}
+
+.etiqueta.redoble {
+  background: #8a6a2e;
+  color: #fff0c9;
+}
+
+.post p {
+  margin-top: 10px;
+  color: #c8c8d8;
+  line-height: 1.5;
+}
+
+/* ===== ACERCA DE ===== */
+.tarjeta-info {
+  background: #1a1a2e;
+  border: 1px solid #2a2a44;
+  border-left: 4px solid #d4af37;
+  border-radius: 10px;
+  padding: 22px 25px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-info h2 {
+  color: #d4af37;
+  margin-bottom: 12px;
+  font-size: 1.3em;
+}
+
+.tarjeta-info p {
+  color: #c8c8d8;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.tarjeta-info strong {
+  color: #ffffff;
+}
+
+/* ===== BOTÓN VOLVER ARRIBA ===== */
+#btnArriba {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #0f0f1a;
+  border: none;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+  z-index: 1000;
+}
+
+#btnArriba.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#btnArriba:hover {
+  transform: translateY(-3px);
+  background: #e8c250;
+}
