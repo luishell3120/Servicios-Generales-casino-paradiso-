@@ -230,3 +230,24 @@ h1 {
   transform: translateY(-3px);
   background: #e8c250;
 }
+
+/* Estilos base: móvil primero */
+
+.menu {
+  display: flex;
+  flex-direction: column; /* menú apilado en móvil */
+}
+
+/* Tablet y superior */
+@media (min-width: 768px) {
+  .menu {
+    flex-direction: row; /* menú horizontal en pantallas grandes */
+  }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+  .contenedor {
+    padding: 0 2rem;
+  }
+}
